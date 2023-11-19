@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { ProfileImg } from '../constants/Images.constant'
 import { EditIcon } from '../constants/Icons.constant'
+import { COLORS } from '../constants/color.constant'
 
 
 const ProfileView = () => {
@@ -35,10 +36,10 @@ const styles = StyleSheet.create({
   editview:{
     position: 'absolute',
     borderWidth: 2,
-    borderColor: '#EEEAF3',
+    borderColor: COLORS.gray200,
     borderRadius: 50,
     padding: 6,
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.light100,
     alignItems: 'center',
     justifyContent: 'center',
     bottom: -2,
@@ -51,13 +52,13 @@ const styles = StyleSheet.create({
   },
   name:{
     fontWeight: '500',
-    color: '#333',
+    color: COLORS.dark200,
   },
   points: {
-    color: '#727682'
+    color: COLORS.gray400
   },
   caption:{
     fontSize: 15,
-    color: '#727682'
+    color: COLORS.gray400
   }
 })

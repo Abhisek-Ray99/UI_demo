@@ -1,5 +1,6 @@
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { Badges, GamesPlayed } from '../screens';
+import { COLORS } from '../constants/color.constant';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -9,11 +10,11 @@ function TopTabNavigation() {
         screenOptions={{
             tabBarLabelStyle: { textTransform: 'none', fontSize: 15, fontWeight: '600', top: 4},
             tabBarStyle: { elevation: 1, height: 60 },
-            tabBarActiveTintColor: '#6231AD',
-            tabBarInactiveTintColor: '#727682',
+            tabBarActiveTintColor: COLORS.primary100,
+            tabBarInactiveTintColor: COLORS.gray400,
             tabBarPressColor: "transparent",
             tabBarIndicatorStyle:{
-                borderColor: '#6231AD',
+                borderColor: COLORS.primary100,
                 borderBottomWidth: 2,
             }
         }}

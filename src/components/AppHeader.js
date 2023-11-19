@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { AppIcon, MessageIcon } from '../constants/Icons.constant'
+import { COLORS } from '../constants/color.constant'
 
 const AppHeader = () => {
   return (
@@ -21,7 +22,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   text:{
-    color: '#727682',
+    color: COLORS.gray400,
     fontSize: 14
   },
   logoImage: {

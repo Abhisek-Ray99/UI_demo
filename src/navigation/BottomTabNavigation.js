@@ -3,6 +3,7 @@ import { Home, LeaderBoard, Leagues, Profile, Research } from '../screens';
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import { HomeIcon, LeaderboardIcon, LeaguesIcon, ProfileIcon, ResearchIcon } from '../constants/Icons.constant';
+import { COLORS } from '../constants/color.constant';
 
 const Tab = createBottomTabNavigator();
 
@@ -10,7 +11,7 @@ function BottomTabs() {
   return (
     <Tab.Navigator
         screenOptions={{
-            tabBarActiveTintColor: '#6231AD',
+            tabBarActiveTintColor: COLORS.primary100,
         }}
     >
       <Tab.Screen 
@@ -19,7 +20,7 @@ function BottomTabs() {
         options={{
             headerShown: false,
             tabBarIcon: ({ focused }) => (
-               <HomeIcon color={focused ? '#6231AD' : '#B5C0C8'} /> 
+               <HomeIcon color={focused ? COLORS.primary100 : COLORS.gray100} /> 
             )
         }}
       />
@@ -28,7 +29,7 @@ function BottomTabs() {
         component={Leagues} 
         options={{
             tabBarIcon: ({ focused }) => (
-                <LeaguesIcon color={focused ? '#6231AD' : '#B5C0C8'} /> 
+                <LeaguesIcon color={focused ? COLORS.primary100 : COLORS.gray100} /> 
             )
         }}
       />
@@ -37,7 +38,7 @@ function BottomTabs() {
         component={Research} 
         options={{
             tabBarIcon: ({ focused }) => (
-                <ResearchIcon color={focused ? '#6231AD' : '#B5C0C8'} /> 
+                <ResearchIcon color={focused ? COLORS.primary100 : COLORS.gray100} /> 
             )
         }}
       />
@@ -46,7 +47,7 @@ function BottomTabs() {
         component={LeaderBoard} 
         options={{
             tabBarIcon: ({ focused }) => (
-                <LeaderboardIcon color={focused ? '#6231AD' : '#B5C0C8'} /> 
+                <LeaderboardIcon color={focused ? COLORS.primary100 : COLORS.gray100} /> 
             )
         }}
       />
@@ -55,7 +56,7 @@ function BottomTabs() {
         component={Profile} 
         options={{
             tabBarIcon: ({ focused }) => (
-                <ProfileIcon color={focused ? '#6231AD' : '#B5C0C8'} /> 
+                <ProfileIcon color={focused ? COLORS.primary100 : COLORS.gray100} /> 
             )
         }}
       />

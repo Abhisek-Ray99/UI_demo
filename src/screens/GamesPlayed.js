@@ -5,6 +5,7 @@ import { GamesImg } from '../constants/Images.constant'
 import { Button } from '../components'
 import Modal from "react-native-modal";
 import { Picker } from 'react-native-wheel-pick';
+import { COLORS } from '../constants/color.constant'
 
 const windowWidth = Dimensions.get('window').width;
 
@@ -25,14 +26,14 @@ const GamesPlayed = () => {
                 <InfoIcon/>
               </View>
               <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                <Text style={[styles.textview, {fontSize: 12, color: '#B296DC'}]}>Starting in</Text>
+                <Text style={[styles.textview, {fontSize: 12, color: COLORS.primary400}]}>Starting in</Text>
                 <TimerIcon/>
                 <Text style={[styles.textview, {fontSize: 14, fontWeight: '500'}]}>03:23:12</Text>
               </View>
             </View>
             <View style={{paddingHorizontal: 8}}>
-              <Text style={{fontSize: 14, fontWeight: '500', color: '#D2BAF5'}}>Bitcoin price will be under </Text>
-              <Text style={{fontSize: 14, fontWeight: '500', color: '#fff'}}><Text style={{fontWeight: '700'}}>$24,524</Text> at 7 a ET on 22nd Jan’21</Text>
+              <Text style={{fontSize: 14, fontWeight: '500', color: COLORS.primary200}}>Bitcoin price will be under </Text>
+              <Text style={{fontSize: 14, fontWeight: '500', color: COLORS.light100}}><Text style={{fontWeight: '700'}}>$24,524</Text> at 7 a ET on 22nd Jan’21</Text>
             </View>
           </View>
           <View style={[styles.imgsection, styles.bg]}>
@@ -46,30 +47,30 @@ const GamesPlayed = () => {
           <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
             <View style={{flexDirection: 'column', gap: 8}}>
               <Text>PRIZE POOL</Text>
-              <Text style={{fontSize: 14, fontWeight:'600', color: '#333333'}}>$12,000</Text>
+              <Text style={{fontSize: 14, fontWeight:'600', color: COLORS.dark200}}>$12,000</Text>
             </View>
             <View style={{flexDirection: 'column', gap: 8}}>
               <Text>UNDER</Text>
-              <Text style={{fontSize: 14, fontWeight:'600', color: '#333333'}}>3.25x</Text>
+              <Text style={{fontSize: 14, fontWeight:'600', color: COLORS.dark200}}>3.25x</Text>
             </View>
             <View style={{flexDirection: 'column', gap: 8}}>
               <Text>OVER</Text>
-              <Text style={{fontSize: 14, fontWeight:'600', color: '#333333'}}>1.25x</Text>
+              <Text style={{fontSize: 14, fontWeight:'600', color: COLORS.dark200}}>1.25x</Text>
             </View>
             <View style={{flexDirection: 'column', gap: 8}}>
               <Text>Entry Fees</Text>
               <View style={{textAlign: 'right', flexDirection: 'row', alignItems: 'center', gap: 8}}>
-                <Text style={{fontSize: 14, fontWeight:'600', color: '#333333'}}>5</Text>
+                <Text style={{fontSize: 14, fontWeight:'600', color: COLORS.dark200}}>5</Text>
                 <CoinIcon/>
               </View>
             </View>
           </View>
           <View>
-            <Text style={{fontSize: 14, fontWeight: '600', paddingVertical: 12, color: '#727682'}}>What’s your prediction?</Text>
+            <Text style={{fontSize: 14, fontWeight: '600', paddingVertical: 12, color: COLORS.gray400}}>What’s your prediction?</Text>
             <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingTop: 4}}>
-              <Button title="Under" bgColor='#452C55' borderRadius={45} color='#fff' icon={<DownIcon/>} />
+              <Button title="Under" bgColor={COLORS.primary300} borderRadius={45} color={COLORS.light100} icon={<DownIcon/>} />
               <Button 
-                title="Over" bgColor='#6231AD' borderRadius={45} color='#fff' icon={<UpIcon/>} 
+                title="Over" bgColor={COLORS.primary100} borderRadius={45} color={COLORS.light100} icon={<UpIcon/>} 
                 onPress={()=> {
                   toggleModal()
                 }}
@@ -81,11 +82,11 @@ const GamesPlayed = () => {
           <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 16, paddingVertical: 16}}>
             <View style={{flexDirection: 'row', alignItems: 'center', gap: 10}}>
               <UserIcon/>
-              <Text style={{fontSize: 14, fontWeight: '600', color: '#727682'}}>355 Players</Text>
+              <Text style={{fontSize: 14, fontWeight: '600', color: COLORS.gray400}}>355 Players</Text>
             </View>
             <View style={{flexDirection: 'row', alignItems: 'center', gap: 10}}>
               <ChartIcon/>
-              <Text style={{fontSize: 14, fontWeight: '600', color: '#727682'}}>View chart</Text>
+              <Text style={{fontSize: 14, fontWeight: '600', color: COLORS.gray400}}>View chart</Text>
             </View>
           </View>
           <View style={{paddingHorizontal: 16}}>
@@ -97,16 +98,16 @@ const GamesPlayed = () => {
               flexDirection: 'row',
               overflow: 'hidden'
             }}>
-              <View style={{width: '60%', height: 10, backgroundColor: '#FE4190'}}/>
-              <View style={{width: '40%', height: 10, backgroundColor: '#2DABAD'}}/>
+              <View style={{width: '60%', height: 10, backgroundColor: COLORS.pink100}}/>
+              <View style={{width: '40%', height: 10, backgroundColor: COLORS.green200}}/>
             </View>
           </View>
           <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 16, paddingVertical: 16}}>
             <View style={{flexDirection: 'row', alignItems: 'center', gap: 10}}>
-              <Text style={{fontSize: 12, fontWeight: '500', color: '#B5C0C8'}}>232 predicted under</Text>
+              <Text style={{fontSize: 12, fontWeight: '500', color: COLORS.gray100}}>232 predicted under</Text>
             </View>
             <View style={{flexDirection: 'row', alignItems: 'center', gap: 10}}>
-              <Text style={{fontSize: 12, fontWeight: '500', color: '#B5C0C8'}}>123 predicted over</Text>
+              <Text style={{fontSize: 12, fontWeight: '500', color: COLORS.gray100}}>123 predicted over</Text>
             </View>
           </View>
         </View>
@@ -123,7 +124,7 @@ const GamesPlayed = () => {
         animationOutTiming={300}
         backdropTransitionInTiming={1000}
         backdropTransitionOutTiming={500}
-        backdropColor={'#000'}
+        backdropColor={COLORS.dark100}
         backdropOpacity={0.5}
         statusBarTranslucent 
         style={styles.modal}
@@ -134,8 +135,8 @@ const GamesPlayed = () => {
               <View style={styles.barIcon} />
             </View>
             <View style={{paddingHorizontal: 16}}>
-              <View>
-                <Text style={{fontSize: 16, fontWeight: '600', color: '#333333'}}>Your Prediction is Under</Text>
+              <View style={{}}>
+                <Text style={{fontSize: 16, fontWeight: '600', color: COLORS.dark200}}>Your Prediction is Under</Text>
               </View>
               <View style={{alignItems: 'center'}}>
                 <Picker
@@ -147,15 +148,15 @@ const GamesPlayed = () => {
               </View>
               <View style={{flexDirection: 'row', paddingVertical: 10, justifyContent: 'space-between'}}>
                 <View style={{flexDirection: 'column' , gap: 4}}>
-                  <Text style={{fontWeight: '500', color: '#B5C0C8', fontSize: 12, textTransform: 'capitalize'}}>You can win</Text>
-                  <Text style={{fontWeight: '600', color: '#03A67F', fontSize: 14}}>$2000</Text>
+                  <Text style={{fontWeight: '500', color: COLORS.gray100, fontSize: 12, textTransform: 'capitalize'}}>You can win</Text>
+                  <Text style={{fontWeight: '600', color: COLORS.green100, fontSize: 14}}>$2000</Text>
                 </View>
                 <View style={{justifyContent: 'flex-end'}}>
                   <Text><Text>Total</Text>  <CoinIcon/> 5</Text>
                 </View>
               </View>
               <View style={{paddingVertical: 16}}>
-                <Button title="Submit my prediction" bgColor='#6231AD' borderRadius={45} color='#fff' />
+                <Button title="Submit my prediction" bgColor={COLORS.primary100} borderRadius={45} color={COLORS.light100} />
               </View>
             </View>
           </View>

@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { ActivityIcon, HighIcon, LowIcon } from '../constants/Icons.constant'
+import { COLORS } from '../constants/color.constant'
 
 const Score = ()=>{
   return(
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
     width: 343,
     height: 103,
     borderWidth: 1,
-    borderColor: '#EEEAF3',
+    borderColor: COLORS.gray200,
     borderRadius: 5,
     justifyContent: 'center'
   },
@@ -81,6 +82,6 @@ const styles = StyleSheet.create({
   percentage:{
     fontSize: 24,
     fontWeight: '700',
-    color: '#4F4F4F'
+    color: COLORS.gray500
   }
 })

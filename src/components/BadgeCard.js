@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Group from '../assets/images/Group.svg'
+import { COLORS } from '../constants/color.constant'
 
 const BadgeCard = ({
   name,
@@ -15,9 +16,9 @@ const BadgeCard = ({
       <View style={styles.textview}>
         <View style={styles.title}>
           <Text style={styles.name}>{name}</Text>
-          <Text style={{color: '#FFA600', fontWeight: '600', fontSize: 14}}>{badge ? ` x ${badge}` : null}</Text>
+          <Text style={{color: COLORS.yellow100, fontWeight: '600', fontSize: 14}}>{badge ? ` x ${badge}` : null}</Text>
         </View>
-        <Text style={{fontSize: 14, color: '#727682', fontWeight: '500'}}>{desc}</Text>
+        <Text style={{fontSize: 14, color: COLORS.gray400, fontWeight: '500'}}>{desc}</Text>
       </View>
     </View>
   )
@@ -31,8 +32,8 @@ const styles = StyleSheet.create({
         height: 105,
         borderRadius: 5,
         borderWidth: 1,
-        borderColor: '#EEEAF3',
-        backgroundColor: '#fff',
+        borderColor: COLORS.gray200,
+        backgroundColor: COLORS.light100,
         marginVertical: 6,
         flexDirection: 'row',
         gap: 20,
@@ -44,7 +45,7 @@ const styles = StyleSheet.create({
     },
     name:{
       fontSize: 14,
-      color: '#333',
+      color: COLORS.dark200,
       fontWeight: '600',
     },
     textview:{

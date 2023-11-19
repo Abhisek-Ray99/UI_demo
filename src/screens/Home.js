@@ -3,6 +3,7 @@ import React,{ useRef } from 'react'
 import { AppHeader, Button, ProfileActivity, ProfileView } from '../components'
 import { Logout } from '../constants/Icons.constant'
 import BottomSheet from './BottomSheet'
+import { COLORS } from '../constants/color.constant'
 
 const Home = () => {
   const ref = useRef(null)
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
   },
   topview:{
     flex: 1.8,
-    backgroundColor: 'white',
+    backgroundColor: COLORS.light100,
     paddingVertical: 20,
     paddingHorizontal: 20,
     justifyContent: 'center',

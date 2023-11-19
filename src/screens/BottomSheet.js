@@ -3,6 +3,7 @@ import React from 'react'
 import { Gesture, GestureDetector } from 'react-native-gesture-handler'
 import Animated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated'
 import TopTabNavigation from '../navigation/TopTabNavigation'
+import { COLORS } from '../constants/color.constant'
 
 const {height: SCREEN_HEIGHT} = Dimensions.get('window')
 
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
     line: {
         width: '100%',
         height: 4,
-        backgroundColor: '#F6F3FA',
+        backgroundColor: COLORS.gray300,
         alignSelf: 'center',
         borderRadius: 2,
     }
